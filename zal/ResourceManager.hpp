@@ -1,14 +1,13 @@
 #pragma once
 
 #include "Resource.hpp"
-using namespace std;
 
 class ResourceManager
 {
 public:
     ResourceManager()
     {
-        x = 0;
+        x = new Resource;
     }
     ResourceManager(ResourceManager& r)
     {
@@ -16,17 +15,17 @@ public:
     }
     ResourceManager& operator=(ResourceManager& r)
     {
-        delete x;
+        this->x = r.x;
         return r;
     }
-    ResourceManager& operator=(ResourceManager&& r)
+    ResourceManager& operator=(ResourceManager&& r) noexcept
     {
         delete x;
         x = r.x;
         r.x = nullptr;
         return *this;
     }
-    ResourceManager(ResourceManager&& r)
+    ResourceManager(ResourceManager&& r) noexcept
     {
         x = r.x;
         r.x = nullptr;

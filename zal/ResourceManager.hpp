@@ -38,7 +38,7 @@ public:
 	}
 	double get()
 	{
-		return Resource.get();
+		return x.get();
 	}
 private:
 	Resource* x;

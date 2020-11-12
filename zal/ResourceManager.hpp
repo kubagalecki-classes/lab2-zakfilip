@@ -38,8 +38,8 @@ public:
 	}
 	double* get()
 	{
-		return x;
+		return Resource.get();
 	}
 private:
-	double* x;
+	Resource* x;
 };

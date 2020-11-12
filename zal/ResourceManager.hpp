@@ -36,7 +36,7 @@ public:
 	{
 		delete x;
 	}
-	double* get()
+	double get()
 	{
 		return Resource.get();
 	}

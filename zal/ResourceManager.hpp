@@ -7,7 +7,7 @@ class ResourceManager
 public:
     ResourceManager()
     {
-        x = new Resource;
+        x = nullptr;
     }
     ResourceManager(const ResourceManager& r)
     {

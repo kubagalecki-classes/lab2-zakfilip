@@ -34,8 +34,8 @@ public:
     }
     ~ResourceManager()
     {
-        x = nullptr;
         delete x;
+        x = nullptr;
     }
     double get()
     {

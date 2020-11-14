@@ -11,13 +11,11 @@ public:
     }
     ResourceManager(const ResourceManager& r)
     {   
-        delete x;
         x = new Resource;
         *x = *r.x;
     }
     ResourceManager& operator=(const ResourceManager& r)
     {
-        delete x;
         x = new Resource;
         *x = *r.x;
         return *this;

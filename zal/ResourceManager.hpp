@@ -10,14 +10,14 @@ public:
         x = new Resource;
     }
     ResourceManager(const ResourceManager& r)
-    {
-        x = r.x;
+    {       
+        x = new Resource;
+        *x = *r.x;
     }
     ResourceManager& operator=(const ResourceManager& r)
     {
-        if (&r == this)
-            return *this;
-        this->x = r.x;
+        x = new Resource;
+        *x = *r.x;
         return *this;
     }
     ResourceManager& operator=(ResourceManager&& r) noexcept
